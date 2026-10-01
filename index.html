@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S30 Papamoa Rewards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141210;
+  --surface:#1d1a16;
+  --surface-2:#242019;
+  --gold:#d8b24a;
+  --accent:#e8630f;
+  --fg:#f3ede0;
+  --fg-muted:#b7ad98;
+  --border:rgba(216,178,74,0.22);
+  --font-display:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Inter',system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-body);
+  padding-inline:16px;
+  padding-block:28px;
+  display:flex;
+  justify-content:center;
+}
+.page{width:100%;max-width:560px;}
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,0.6);
+}
+.hero{
+  background:
+    radial-gradient(120% 140% at 15% -10%, rgba(216,178,74,0.16), transparent 55%),
+    linear-gradient(180deg, #1a1712, #110f0c);
+  padding:34px 24px 22px;
+  text-align:center;
+  border-bottom:3px solid var(--gold);
+}
+.eyebrow{
+  font-size:11.5px;font-weight:700;letter-spacing:0.22em;
+  color:var(--gold);text-transform:uppercase;margin:0 0 6px;
+}
+.wordmark{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(34px, 9vw, 46px);letter-spacing:0.06em;margin:0;
+  color:var(--fg);text-wrap:balance;
+}
+.wordmark span{color:var(--gold);}
+.tagline{font-size:13.5px;color:var(--fg-muted);margin:10px 0 0;}
+.ribbon{
+  background:var(--accent);color:#fff7ec;text-align:center;
+  font-weight:700;font-size:12.5px;letter-spacing:0.12em;
+  text-transform:uppercase;padding:9px 16px;
+}
+.howto{
+  margin:20px;padding:16px 18px;background:var(--surface-2);
+  border:1px solid var(--border);border-radius:12px;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.howto .mark{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;
+  background:var(--gold);color:#1a1712;display:flex;align-items:center;
+  justify-content:center;font-family:var(--font-display);font-size:17px;font-weight:600;
+}
+.howto p{margin:0;font-size:13.5px;line-height:1.55;color:var(--fg);}
+.howto p+p{margin-top:6px;color:var(--fg-muted);font-size:12.5px;}
+.categories{padding:4px 20px 6px;display:flex;flex-direction:column;gap:18px;}
+.category-head{
+  display:flex;align-items:baseline;gap:10px;padding-bottom:6px;
+  border-bottom:2px solid var(--gold);
+}
+.category-head h2{
+  font-family:var(--font-display);font-weight:600;font-size:19px;
+  letter-spacing:0.05em;text-transform:uppercase;color:var(--gold);margin:0;
+}
+.category-count{font-size:11.5px;color:var(--fg-muted);font-weight:600;margin-left:auto;}
+.biz-list{display:flex;flex-direction:column;}
+.biz-row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:11px 2px;border-bottom:1px solid var(--border);
+}
+.biz-row:last-child{border-bottom:none;}
+.biz-name{font-weight:700;font-size:14.5px;color:var(--fg);min-width:0;}
+.biz-discount{font-size:13px;color:var(--fg-muted);text-align:right;min-width:0;flex:1 1 55%;}
+.biz-discount.tbc{color:var(--accent);font-style:italic;font-weight:700;}
+.tbc-tag{
+  display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.08em;
+  background:rgba(232,99,15,0.15);color:var(--accent);
+  border:1px solid rgba(232,99,15,0.4);border-radius:5px;
+  padding:1px 5px;margin-right:6px;vertical-align:middle;
+}
+.footer-note{
+  margin:14px 20px 22px;padding-top:14px;border-top:1px dashed var(--border);
+  font-size:11.5px;line-height:1.6;color:var(--fg-muted);
+}
+.footer-note b{color:var(--fg);}
+.updated{
+  margin:0 20px 18px;font-size:10.5px;color:var(--fg-muted);
+  text-align:right;font-variant-numeric:tabular-nums;
+}
+.closing{background:#110f0c;text-align:center;padding:16px;border-top:3px solid var(--gold);}
+.closing p{
+  margin:0;font-family:var(--font-display);letter-spacing:0.14em;
+  font-size:13px;color:var(--gold);text-transform:uppercase;
+}
+@media (max-width:380px){
+  .biz-row{flex-direction:column;align-items:flex-start;gap:2px;}
+  .biz-discount{text-align:left;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="card">
+    <div class="hero">
+      <p class="eyebrow">S30 Papamoa</p>
+      <h1 class="wordmark">MEMBER <span>REWARDS</span></h1>
+      <p class="tagline">Exclusive local discounts for S30 members</p>
+    </div>
+    <div class="ribbon">Exclusive perks for our members</div>
+
+    <div class="howto">
+      <div class="mark">!</div>
+      <div>
+        <p>Show your card in these stores to receive these discounts.</p>
+        <p>They may ask for your Mindbody app as proof that you're an active member.</p>
+      </div>
+    </div>
+
+    <div class="categories" id="categories"></div>
+
+    <p class="updated" id="updated">Loading latest discounts&hellip;</p>
+
+    <div class="footer-note">
+      <b>New to the list?</b> More local partners are being added all the time &mdash; check back here for updates. Discounts and terms are set by each business and may change without notice.
+    </div>
+
+    <div class="closing">
+      <p>S30 Papamoa &bull; Train With Us</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---- Which businesses show on the page, which category they sit under, ----
+// ---- and the discount text to use until/unless the live sheet overrides it. ----
+// sheetName only needed when it differs from `name` once both are normalized
+// (trimmed, lowercased, trailing dots stripped, whitespace collapsed).
+const CATEGORY_ORDER = [
+  "Food & Drink",
+  "Beauty & Body",
+  "Health & Wellness",
+  "Auto Care",
+  "Home Services",
+  "Shopping & Lifestyle"
+];
+
+const BUSINESSES = [
+  { name: "Candied Courage Coffee Club", category: "Food & Drink", fallback: "20% off" },
+  { name: "The Wagon Papamoa", category: "Food & Drink", fallback: "Free canned drink with any burger" },
+  { name: "Pap House", category: "Food & Drink", fallback: "TBC" },
+
+  { name: "Brow & Beauty Loft", category: "Beauty & Body", fallback: "15% off services, or 10% off retail", sheetName: "Brow Beauty Loft" },
+  { name: "Caci", category: "Beauty & Body", fallback: "$100 credit when you join on a membership" },
+  { name: "Cosmetic Inc Studio", category: "Beauty & Body", fallback: "$100 off any tattoo" },
+  { name: "Charm Body Piercing Bayfair", category: "Beauty & Body", fallback: "20% off (excludes promos)" },
+  { name: "Wass Barbers", category: "Beauty & Body", fallback: "TBC" },
+
+  { name: "The Wellness Hub", category: "Health & Wellness", fallback: "20% off your 1st & 2nd chiropractic or kinesiology appointment" },
+  { name: "Boutique Physio Te Puke", category: "Health & Wellness", fallback: "Free initial appointment (ACC claims)" },
+
+  { name: "Wash n Shine", category: "Auto Care", fallback: "15% off (auto services only)" },
+
+  { name: "Shoreline Pool Services", category: "Home Services", fallback: "First valet free with a weekly or fortnightly plan (T&Cs apply)" },
+  { name: "Tauranga Window Cleaning", category: "Home Services", fallback: "20% off" },
+  { name: "Quality Air Conditioning", category: "Home Services", fallback: "$160 heat pump service & deep clean" },
+  { name: "CCD", category: "Home Services", fallback: "20% off all services" },
+  { name: "Eden Propertycare", category: "Home Services", fallback: "TBC for ongoing or large one-off work — free lawn & garden fertiliser for ongoing clients" },
+
+  { name: "Lorna Jane", category: "Shopping & Lifestyle", fallback: "20% off in-store" },
+  { name: "Emma Jane Photography", category: "Shopping & Lifestyle", fallback: "15% off signature or heirloom sessions" },
+  { name: "The Cave", category: "Shopping & Lifestyle", fallback: "$10 off per person — code S30VIP online" },
+  { name: "LSKD", category: "Shopping & Lifestyle", fallback: "15% off with code S30Papamoa15" },
+  { name: "Smoove (Vintage Clothing)", category: "Shopping & Lifestyle", fallback: "TBC", sheetName: "Smoove (Vintage Clothing Store)" }
+];
+
+const SHEET_ID = "1Ajgxgi9U-crw04Fkdk40G7wWCbq2_wV-7I3RFCyTybQ";
+const SHEET_TAB = "S30 rewards partners";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/" + SHEET_ID +
+  "/gviz/tq?tqx=out:csv&sheet=" + encodeURIComponent(SHEET_TAB);
+
+function normalize(s) {
+  return (s || "").trim().toLowerCase().replace(/\.+$/, "").replace(/\s+/g, " ");
+}
+
+function isPending(text) {
+  const t = normalize(text);
+  if (!t) return true;
+  if (t.indexOf("tbc") !== -1) return true;
+  if (t.indexOf("chatting") !== -1) return true;
+  if (t.indexOf("getting back") !== -1) return true;
+  if (t.indexOf("keen but") !== -1) return true;
+  return false;
+}
+
+// Minimal CSV parser: handles quoted fields with embedded commas/newlines/quotes.
+function parseCSV(text) {
+  const rows = [];
+  let row = [], field = "", inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else {
+      if (c === '"') inQuotes = true;
+      else if (c === ",") { row.push(field); field = ""; }
+      else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+      else if (c === "\r") { /* skip */ }
+      else field += c;
+    }
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+function render(businesses) {
+  const byCategory = {};
+  businesses.forEach(b => {
+    if (!byCategory[b.category]) byCategory[b.category] = [];
+    byCategory[b.category].push(b);
+  });
+
+  const container = document.getElementById("categories");
+  container.innerHTML = "";
+
+  CATEGORY_ORDER.forEach(cat => {
+    const items = byCategory[cat];
+    if (!items || !items.length) return;
+
+    const section = document.createElement("section");
+
+    const head = document.createElement("div");
+    head.className = "category-head";
+    head.innerHTML = "<h2>" + cat + "</h2><span class=\"category-count\">" + items.length + "</span>";
+    section.appendChild(head);
+
+    const list = document.createElement("div");
+    list.className = "biz-list";
+    items.forEach(b => {
+      const row = document.createElement("div");
+      row.className = "biz-row";
+      const pending = isPending(b.discount);
+      const discountHTML = pending
+        ? "<span class=\"tbc-tag\">TBC</span>" + (normalize(b.discount) && !/^tbc$/.test(normalize(b.discount)) ? escapeHTML(b.discount) : "Details coming soon")
+        : escapeHTML(b.discount);
+      row.innerHTML =
+        "<span class=\"biz-name\"></span>" +
+        "<span class=\"biz-discount" + (pending ? " tbc" : "") + "\"></span>";
+      row.querySelector(".biz-name").textContent = b.name;
+      row.querySelector(".biz-discount").innerHTML = discountHTML;
+      list.appendChild(row);
+    });
+    section.appendChild(list);
+    container.appendChild(section);
+  });
+}
+
+function escapeHTML(s) {
+  const div = document.createElement("div");
+  div.textContent = s || "";
+  return div.innerHTML;
+}
+
+// Render immediately from fallback text so the page is never empty,
+// then try to refresh each business's discount from the live sheet.
+const working = BUSINESSES.map(b => ({ ...b, discount: b.fallback }));
+render(working);
+
+fetch(CSV_URL)
+  .then(r => { if (!r.ok) throw new Error("fetch failed"); return r.text(); })
+  .then(text => {
+    const rows = parseCSV(text);
+    // Row 0 is the header: Cell number, Business, Contact person, Logo, Contract, Discount, Email
+    const liveByName = {};
+    for (let i = 1; i < rows.length; i++) {
+      const r = rows[i];
+      const name = normalize(r[1]);
+      if (!name) continue;
+      liveByName[name] = (r[5] || "").trim();
+    }
+    const updated = working.map(b => {
+      const key = normalize(b.sheetName || b.name);
+      const live = liveByName[key];
+      return live !== undefined && live !== "" ? { ...b, discount: live } : b;
+    });
+    render(updated);
+    document.getElementById("updated").textContent =
+      "Updated " + new Date().toLocaleDateString("en-NZ", { day: "numeric", month: "short", year: "numeric" });
+  })
+  .catch(() => {
+    document.getElementById("updated").textContent = "Showing last saved discounts";
+  });
+</script>
+</body>
+</html>
