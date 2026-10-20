@@ -29,6 +29,7 @@ html.s30-unlocked #s30-gate{display:none}
 #s30-gate .tag em{font-style:normal;color:#fff300}
 </style>
 <script>
+try{if(/[?&]lock(&|=|$)/.test(location.search))localStorage.removeItem("s30_member");}catch(e){}
 try{if(localStorage.getItem("s30_member")==="1")document.documentElement.classList.add("s30-unlocked");}catch(e){}
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
