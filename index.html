@@ -7,15 +7,26 @@
 <style>
 html:not(.s30-unlocked) .page{display:none}
 html.s30-unlocked #s30-gate{display:none}
-#s30-gate{position:fixed;inset:0;z-index:9999;background:#0a0a0a;display:flex;align-items:center;justify-content:center;padding:24px;font-family:Inter,system-ui,sans-serif;color:#f5f5f5;text-align:center}
-#s30-gate .box{width:100%;max-width:360px}
-#s30-gate .kicker{font-family:Oswald,sans-serif;font-weight:700;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:#fff300}
-#s30-gate h1{font-family:Anton,Oswald,sans-serif;font-weight:400;font-size:44px;line-height:1.05;margin:10px 0 8px}
+#s30-gate{position:fixed;inset:0;z-index:9999;background:radial-gradient(120% 90% at 50% 0%,#1a1a1a,#0a0a0a 60%);display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#f5f5f5;text-align:center}
+#s30-gate .bg{position:absolute;left:-15%;right:-15%;top:50%;transform:translateY(-50%) rotate(-8deg);display:flex;flex-direction:column;pointer-events:none;user-select:none}
+#s30-gate .row{font-family:Anton,Oswald,sans-serif;font-size:clamp(58px,17vw,128px);line-height:0.95;text-transform:uppercase;white-space:nowrap;letter-spacing:0.01em}
+#s30-gate .row b{font-weight:400;color:rgba(255,255,255,0.10)}
+#s30-gate .row i{font-style:normal;color:transparent;-webkit-text-stroke:1.5px rgba(255,243,0,0.32)}
+#s30-gate .box{position:relative;z-index:1;width:100%;max-width:380px;background:rgba(10,10,10,0.90);border:1px solid rgba(255,243,0,0.4);border-radius:18px;padding:36px 24px 24px;box-shadow:0 24px 60px -10px rgba(0,0,0,0.85);overflow:hidden}
+#s30-gate .box::before,#s30-gate .box::after{content:"";position:absolute;width:150px;height:36px;background:#fff300;pointer-events:none}
+#s30-gate .box::before{top:16px;left:-54px;transform:rotate(-40deg)}
+#s30-gate .box::after{bottom:12px;right:-54px;transform:rotate(-40deg)}
+#s30-gate .kicker{font-family:Oswald,sans-serif;font-weight:700;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#fff300}
+#s30-gate h1{font-family:Anton,Oswald,sans-serif;font-weight:400;font-size:48px;line-height:1.02;margin:10px 0 14px;text-transform:uppercase}
+#s30-gate h1 .hl{display:inline-block;margin-top:6px;background:#fff300;color:#0a0a0a;padding:2px 16px 6px;transform:rotate(-2deg);border-radius:2px}
 #s30-gate p{font-size:14px;line-height:1.5;color:#9e9e9e;margin:0 0 22px}
-#s30-gate input{width:100%;padding:14px 16px;font-size:16px;font-family:inherit;color:#f5f5f5;background:#141414;border:1px solid rgba(255,243,0,0.4);border-radius:10px;text-align:center;letter-spacing:0.12em;text-transform:uppercase;outline:none}
-#s30-gate input:focus{border-color:#fff300}
-#s30-gate button{width:100%;margin-top:12px;padding:14px 16px;font-family:Oswald,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.12em;text-transform:uppercase;color:#0a0a0a;background:#fff300;border:0;border-radius:10px;cursor:pointer}
+#s30-gate input{width:100%;padding:15px 16px;font-size:20px;font-family:Anton,Oswald,sans-serif;color:#fff300;background:#141414;border:2px solid rgba(255,243,0,0.45);border-radius:10px;text-align:center;letter-spacing:0.22em;text-transform:uppercase;outline:none}
+#s30-gate input::placeholder{color:#5a5a5a;letter-spacing:0.18em}
+#s30-gate input:focus{border-color:#fff300;box-shadow:0 0 0 4px rgba(255,243,0,0.18)}
+#s30-gate button{width:100%;margin-top:12px;padding:15px 16px;font-family:Oswald,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;color:#0a0a0a;background:#fff300;border:0;border-radius:10px;cursor:pointer}
 #s30-gate .err{min-height:20px;margin-top:12px;font-size:13px;color:#ff6b6b}
+#s30-gate .tag{margin-top:8px;font-family:Oswald,sans-serif;font-weight:600;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#9e9e9e}
+#s30-gate .tag em{font-style:normal;color:#fff300}
 </style>
 <script>
 try{if(localStorage.getItem("s30_member")==="1")document.documentElement.classList.add("s30-unlocked");}catch(e){}
@@ -395,13 +406,23 @@ fetch(CSV_URL)
   });
 </script>
 <div id="s30-gate">
+<div class="bg" aria-hidden="true">
+<div class="row" style="margin-left:-40px"><b>Work Hard</b> <i>Play Hard</i></div>
+<div class="row" style="margin-left:-10px"><b>Work Hard</b> <i>Play Hard</i></div>
+<div class="row" style="margin-left:20px"><b>Work Hard</b> <i>Play Hard</i></div>
+<div class="row" style="margin-left:50px"><b>Work Hard</b> <i>Play Hard</i></div>
+<div class="row" style="margin-left:-20px"><b>Work Hard</b> <i>Play Hard</i></div>
+<div class="row" style="margin-left:10px"><b>Work Hard</b> <i>Play Hard</i></div>
+<div class="row" style="margin-left:40px"><b>Work Hard</b> <i>Play Hard</i></div>
+</div>
 <form class="box" id="s30-form" autocomplete="off">
 <div class="kicker">S30 Papamoa</div>
-<h1>MEMBERS ONLY</h1>
+<h1>Members<br><span class="hl">Only</span></h1>
 <p>Enter the member code from the S30 Members Facebook page to see your rewards.</p>
 <input id="s30-code" type="text" placeholder="MEMBER CODE" autocapitalize="characters" autocorrect="off" spellcheck="false" aria-label="Member code">
 <button type="submit">Unlock rewards</button>
 <div class="err" id="s30-err" role="alert"></div>
+<div class="tag">Work Hard <em>&rsaquo;</em> Play Hard</div>
 </form>
 </div>
 <script>
